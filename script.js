@@ -71,7 +71,7 @@ app.get('/bacheca', (req, res) => {
     // res.json(blog)
     res.json({
         count: blog.length,
-        allBlog: blog,
+        blog: blog,
     })
 })
 
