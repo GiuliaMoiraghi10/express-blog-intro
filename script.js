@@ -31,31 +31,31 @@ const blog = [
     {
         titolo: 'Ciambellone',
         contenuto: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis vitae dui quis orci finibus porttitor sed eu felis. Pellentesque bibendum quam mattis augue tempor malesuada. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Donec blandit rhoncus ligula vitae posuere.',
-        immagine: '/public/images/ciambellone.jpeg',
+        immagine: '/images/ciambellone.jpeg',
         tags: ['torta', 'dolce', 'forno', 'cake', 'sweet']
     },
     {
         titolo: 'Cracker alla barbabietola',
         contenuto: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis vitae dui quis orci finibus porttitor sed eu felis. Pellentesque bibendum quam mattis augue tempor malesuada. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Donec blandit rhoncus ligula vitae posuere.',
-        immagine: '/public/images/cracker_barbabietola.jpeg',
+        immagine: '/images/cracker_barbabietola.jpeg',
         tags: ['torta', 'dolce', 'forno', 'cake', 'sweet']
     },
     {
         titolo: 'Pane fritto',
         contenuto: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis vitae dui quis orci finibus porttitor sed eu felis. Pellentesque bibendum quam mattis augue tempor malesuada. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Donec blandit rhoncus ligula vitae posuere.',
-        immagine: '/public/images/pane_fritto_dolce.jpeg',
+        immagine: '/images/pane_fritto_dolce.jpeg',
         tags: ['torta', 'dolce', 'forno', 'cake', 'sweet']
     },
     {
         titolo: 'Pasta alla barbabietola',
         contenuto: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis vitae dui quis orci finibus porttitor sed eu felis. Pellentesque bibendum quam mattis augue tempor malesuada. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Donec blandit rhoncus ligula vitae posuere.',
-        immagine: '/public/images/pasta_barbabietola.jpeg',
+        immagine: '/images/pasta_barbabietola.jpeg',
         tags: ['torta', 'dolce', 'forno', 'cake', 'sweet']
     },
     {
         titolo: 'Torta paesana',
         contenuto: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis vitae dui quis orci finibus porttitor sed eu felis. Pellentesque bibendum quam mattis augue tempor malesuada. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Donec blandit rhoncus ligula vitae posuere.',
-        immagine: '/public/images/torta_paesana.jpeg',
+        immagine: '/images/torta_paesana.jpeg',
         tags: ['torta', 'dolce', 'forno', 'cake', 'sweet']
     },
 ]
@@ -68,7 +68,11 @@ app.get('/', (req, res) => {
 })
 
 app.get('/bacheca', (req, res) => {
-    res.json(blog)
+    // res.json(blog)
+    res.json({
+        count: blog.length,
+        allBlog: blog,
+    })
 })
 
 app.listen(port, () => {
