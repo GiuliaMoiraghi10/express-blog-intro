@@ -27,6 +27,40 @@ const express = require('express')
 const app = express()
 const port = 3000
 
+const blog = [
+    {
+        titolo: 'Ciambellone',
+        contenuto: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis vitae dui quis orci finibus porttitor sed eu felis. Pellentesque bibendum quam mattis augue tempor malesuada. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Donec blandit rhoncus ligula vitae posuere.',
+        immagine: '/images/ciambellone.jpeg',
+        tags: ['torta', 'dolce', 'forno', 'cake', 'sweet']
+    },
+    {
+        titolo: 'Cracker alla barbabietola',
+        contenuto: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis vitae dui quis orci finibus porttitor sed eu felis. Pellentesque bibendum quam mattis augue tempor malesuada. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Donec blandit rhoncus ligula vitae posuere.',
+        immagine: '/images/cracker_barbabietola.jpeg',
+        tags: ['torta', 'dolce', 'forno', 'cake', 'sweet']
+    },
+    {
+        titolo: 'Pane fritto',
+        contenuto: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis vitae dui quis orci finibus porttitor sed eu felis. Pellentesque bibendum quam mattis augue tempor malesuada. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Donec blandit rhoncus ligula vitae posuere.',
+        immagine: '/images/pane_fritto_dolce.jpeg',
+        tags: ['torta', 'dolce', 'forno', 'cake', 'sweet']
+    },
+    {
+        titolo: 'Pasta alla barbabietola',
+        contenuto: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis vitae dui quis orci finibus porttitor sed eu felis. Pellentesque bibendum quam mattis augue tempor malesuada. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Donec blandit rhoncus ligula vitae posuere.',
+        immagine: '/images/pasta_barbabietola.jpeg',
+        tags: ['torta', 'dolce', 'forno', 'cake', 'sweet']
+    },
+    {
+        titolo: 'Torta paesana',
+        contenuto: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis vitae dui quis orci finibus porttitor sed eu felis. Pellentesque bibendum quam mattis augue tempor malesuada. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Donec blandit rhoncus ligula vitae posuere.',
+        immagine: '/images/torta_paesana.jpeg',
+        tags: ['torta', 'dolce', 'forno', 'cake', 'sweet']
+    },
+]
+console.log(blog)
+
 app.get('/', (req, res) => {
     res.send('Server del mio blog')
 })
